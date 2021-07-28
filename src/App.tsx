@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import styles from './App.module.css';
+import MovieList from './components/MovieList';
 
 function App(): ReactElement {
   return (
@@ -8,6 +9,8 @@ function App(): ReactElement {
         <h1>
           Star Wars movie collection!
         </h1>
+
+        <MovieList />
       </main>
     </div>
   );
