@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import './App.css';
 
-function App() {
+function App(): ReactElement {
   return (
     <div className="App">
       Star Wars movie collection!
