@@ -1,0 +1,12 @@
+.app {
+  background-color: var(--darkest-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main {
+  text-align: center;
+}

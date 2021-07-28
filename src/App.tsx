@@ -1,10 +1,14 @@
 import React, { ReactElement } from 'react';
-import './App.css';
+import styles from './App.module.css';
 
 function App(): ReactElement {
   return (
-    <div className="App">
-      Star Wars movie collection!
+    <div className={styles.app}>
+      <main className={styles.main}>
+        <h1>
+          Star Wars movie collection!
+        </h1>
+      </main>
     </div>
   );
 }
