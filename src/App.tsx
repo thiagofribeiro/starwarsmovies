@@ -1,6 +1,9 @@
 import React, { ReactElement } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import styles from './App.module.css';
 import MovieList from './components/MovieList';
+
+const queryClient = new QueryClient();
 
 function App(): ReactElement {
   return (
@@ -10,7 +13,9 @@ function App(): ReactElement {
           Star Wars movie collection!
         </h1>
 
-        <MovieList />
+        <QueryClientProvider client={queryClient}>
+          <MovieList />
+        </QueryClientProvider>
       </main>
     </div>
   );
