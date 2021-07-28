@@ -1,0 +1,13 @@
+.movieItem {
+    background-color: var(--dark-color);
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: inset 0 0 20px var(--darkest-color);
+    font-weight: bolder;
+}
+
+.movieItem:hover {
+    background-color: var(--mid-color);
+    color: var(--primary-color-light);
+}
