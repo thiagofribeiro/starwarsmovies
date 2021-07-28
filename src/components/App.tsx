@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import styles from './App.module.css';
-import MovieList from './components/MovieList';
+import MovieList from './MovieList';
 
 const queryClient = new QueryClient();
 
