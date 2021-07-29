@@ -40,7 +40,6 @@ function MovieList(): ReactElement {
           <MovieItem
             key={item.episode_id}
             movie={item}
-            onSelect={(movie) => setSelectedMovie(movie)}
           />
         )) }
       </div>
