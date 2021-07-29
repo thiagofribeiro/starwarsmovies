@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { MoviesContextProvider } from '../contexts/movies';
 import styles from './App.module.css';
 import MovieList from './MovieList';
 
@@ -14,7 +15,9 @@ function App(): ReactElement {
         </h1>
 
         <QueryClientProvider client={queryClient}>
-          <MovieList />
+          <MoviesContextProvider>
+            <MovieList />
+          </MoviesContextProvider>
         </QueryClientProvider>
       </main>
     </div>
