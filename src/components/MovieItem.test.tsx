@@ -4,7 +4,9 @@ import MovieItem from './MovieItem';
 import IMovie from '../types/IMovie';
 import { MoviesContextProvider } from '../contexts/movies';
 
-const movie: IMovie = { episode_id: 4, title: 'A New Hope', release_date: '1977' };
+const movie: IMovie = {
+  episode_id: 4, title: 'A New Hope', release_date: '1977', opening_crawl: '',
+};
 
 describe('movie item tests', () => {
   test('renders movie list item element', () => {

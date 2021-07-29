@@ -9,3 +9,9 @@
 .episode {
     color: var(--secondary-color);
 }
+
+.openingCrawl {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    color: var(--lightest-color)
+}
