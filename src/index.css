@@ -1,3 +1,7 @@
+html {
+  font-size:16px;
+}
+
 :root {
   --darkest-color: #130c0e;
   --dark-color: #3d3337;
@@ -31,4 +35,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+
+  }
 }
