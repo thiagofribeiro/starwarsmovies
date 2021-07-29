@@ -5,6 +5,7 @@ import MovieItem from './MovieItem';
 import Overlay from './Overlay';
 import IResponse from '../types/IResponse';
 import { useMoviesContext } from '../contexts/movies';
+import MovieDetail from './MovieDetail';
 
 const getMovies = async () => {
   const response = await fetch('https://swapi.dev/api/films/');
@@ -46,7 +47,7 @@ function MovieList(): ReactElement {
       <Overlay
         onClose={() => setSelectedMovie(null)}
       >
-        {selectedMovie && selectedMovie.title}
+        {selectedMovie && <MovieDetail />}
       </Overlay>
     </>
   );

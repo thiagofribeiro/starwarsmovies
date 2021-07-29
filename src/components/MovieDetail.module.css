@@ -1,0 +1,11 @@
+.detail {
+    margin: 100px 300px;
+}
+
+.brand {
+    font-size: 5rem;
+}
+
+.episode {
+    color: var(--secondary-color);
+}
