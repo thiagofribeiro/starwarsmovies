@@ -6,6 +6,9 @@
     font-size: 5rem;
     animation: zoomout 5s cubic-bezier(.4,.82,.28,.72) 2s;
     animation-fill-mode: both;
+    text-shadow: 0 0 1px var(--primary-color),0 0 2px var(--primary-color),0 0 5px var(--primary-color);
+    color: var(--darkest-color)
+
 }
 
 .episode {
