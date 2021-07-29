@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { MoviesContextProvider } from '../contexts/movies';
 import styles from './App.module.css';
+import LastEdition from './LastEdition';
 import MovieList from './MovieList';
 import People from './People';
 
@@ -19,6 +20,7 @@ function App(): ReactElement {
           <MoviesContextProvider>
             <MovieList />
             <People />
+            <LastEdition />
           </MoviesContextProvider>
         </QueryClientProvider>
       </main>
