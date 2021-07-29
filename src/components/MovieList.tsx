@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 import IMovie from '../types/IMovie';
 import MovieItem from './MovieItem';
 import Overlay from './Overlay';
@@ -22,11 +22,12 @@ const getMovies = async () => {
 };
 
 function MovieList(): ReactElement {
-  const { movies, setMovies } = useMoviesContext();
+  const {
+    movies, setMovies, selectedMovie, setSelectedMovie,
+  } = useMoviesContext();
   const { isLoading, error } = useQuery<IMovie[], Error>('repoData', getMovies, {
     onSuccess: (data) => setMovies(data),
   });
-  const [selectedMovie, setSelectedMovie] = useState<IMovie | null>();
 
   if (isLoading) return <div data-testid="movie-list">Loading...</div>;
 
