@@ -19,6 +19,10 @@
     margin-left: 20px;
 }
 
+.close:hover {
+    color: var(--secondary-color-light);
+}
+
 .closeText {
     font-size: 2rem;
     margin-left: 20px;
