@@ -1,5 +1,5 @@
 .detail {
-    margin: 100px 10%;
+    margin: 100px 20%;
 }
 
 .brand {
@@ -13,9 +13,11 @@
 }
 
 .openingCrawl {
-    margin-top: 20px;
-    font-size: 1.25rem;
-    color: var(--lightest-color)
+    margin-top: -35px;
+    font-size: 1.5rem;
+    color: var(--lightest-color);
+    transform: perspective(30px) rotateX(2deg);
+
 }
 
 @media (max-width: 500px) {
@@ -27,5 +29,4 @@
 @keyframes zoomout {
     from { transform: scale(1) }
     to { transform: scale(0) }
-  }
-  
+}

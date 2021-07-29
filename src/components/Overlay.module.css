@@ -16,6 +16,7 @@
     background-color: var(--darkest-color);
     animation: intro 1s;
     animation-fill-mode: both;
+    overflow-x: hidden;
 }
 
 .close {
