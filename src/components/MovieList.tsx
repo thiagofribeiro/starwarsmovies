@@ -4,6 +4,7 @@ import IMovie from '../types/IMovie';
 import MovieItem from './MovieItem';
 import Overlay from './Overlay';
 import IResponse from '../types/IResponse';
+import { useMoviesContext } from '../contexts/movies';
 
 const getMovies = async () => {
   const response = await fetch('https://swapi.dev/api/films/');
@@ -12,16 +13,19 @@ const getMovies = async () => {
     throw new Error('Problem fetching user');
   }
 
-  const responseData = await response.json();
+  const responseData: IResponse<IMovie> = await response.json();
   if (!(responseData && responseData.count > 0)) {
     throw new Error('No movies founded');
   }
 
-  return responseData;
+  return responseData.results;
 };
 
 function MovieList(): ReactElement {
-  const { isLoading, error, data } = useQuery<boolean, Error, IResponse<IMovie>>('repoData', getMovies);
+  const { movies, setMovies } = useMoviesContext();
+  const { isLoading, error } = useQuery<IMovie[], Error>('repoData', getMovies, {
+    onSuccess: (data) => setMovies(data),
+  });
   const [selectedMovie, setSelectedMovie] = useState<IMovie | null>();
 
   if (isLoading) return <div data-testid="movie-list">Loading...</div>;
@@ -31,7 +35,7 @@ function MovieList(): ReactElement {
   return (
     <>
       <div data-testid="movie-list">
-        { data && data.results.map((item) => (
+        { movies && movies.map((item) => (
           <MovieItem
             key={item.episode_id}
             movie={item}
