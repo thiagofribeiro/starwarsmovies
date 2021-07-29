@@ -6,3 +6,25 @@
     height: 100vh;
     background-color: var(--darkest-color);
 }
+
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    color: var(--secondary-color);
+    font-size: 3rem;
+    border: 0;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.closeText {
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+.closeSign {
+    padding-top: 9px;
+    float: left;
+}
