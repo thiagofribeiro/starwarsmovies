@@ -4,7 +4,18 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+
+.overlayContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--darkest-color);
+    animation: intro 1s;
+    animation-fill-mode: both;
 }
 
 .close {
@@ -32,3 +43,34 @@
     padding-top: 9px;
     float: left;
 }
+
+.fadeOut {
+    animation: fadeout 1s linear;
+    animation-fill-mode: both;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+        top: 100vh;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        filter: blur(0) brightness(1);
+    }
+    75% {
+        filter: blur(7px) brightness(0);
+        opacity: 1;
+    }
+    100% {
+        filter: blur(7px) brightness(0);
+        opacity: 0;
+    }
+}
+
