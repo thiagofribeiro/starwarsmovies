@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { MoviesContextProvider } from '../contexts/movies';
 import styles from './App.module.css';
 import MovieList from './MovieList';
+import People from './People';
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ function App(): ReactElement {
         <QueryClientProvider client={queryClient}>
           <MoviesContextProvider>
             <MovieList />
+            <People />
           </MoviesContextProvider>
         </QueryClientProvider>
       </main>
