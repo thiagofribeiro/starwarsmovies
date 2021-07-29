@@ -3,12 +3,14 @@ import { romanize } from 'romans';
 import IMovie from '../types/IMovie';
 import styles from './MovieItem.module.css';
 
-function MovieList({ movie }: {movie: IMovie}): ReactElement {
+function MovieItem(
+  { movie, onSelect }: {movie: IMovie, onSelect: (movieItem: IMovie) => void },
+): ReactElement {
   return (
-    <div className={styles.movieItem} data-testid="movie-list-item">
+    <button type="button" className={styles.movieItem} data-testid="movie-list-item" onClick={() => onSelect(movie)}>
       {`Episode ${romanize(movie.episode_id)} - ${movie.title} (${movie.release_date.split('-')[0]})`}
-    </div>
+    </button>
   );
 }
 
-export default MovieList;
+export default MovieItem;
