@@ -6,6 +6,7 @@ import Overlay from './Overlay';
 import IResponse from '../types/IResponse';
 import { useMoviesContext } from '../contexts/movies';
 import MovieDetail from './MovieDetail';
+import BB8Loader from './BB8Loader';
 
 const getMovies = async () => {
   const response = await fetch('https://swapi.dev/api/films/');
@@ -30,7 +31,7 @@ function MovieList(): ReactElement {
     onSuccess: (data) => setMovies(data),
   });
 
-  if (isLoading) return <div data-testid="movie-list">Loading...</div>;
+  if (isLoading) return <div data-testid="movie-list"><BB8Loader /></div>;
 
   if (error) return <div data-testid="movie-list">{`${error.message}`}</div>;
 
